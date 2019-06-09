@@ -1,0 +1,16 @@
+
+.introHeader {
+    display: grid;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.memoryPic {
+    width: 200px;
+}
+
+.introText {
+    text-align: center;
+}

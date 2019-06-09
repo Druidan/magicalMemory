@@ -1,0 +1,27 @@
+.gameBoard {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+
+.cardsDiv{
+    display: grid;
+    margin: 10px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    max-width: 4fr;
+    justify-self: center;
+    justify-items: center;
+}
+
+.mtgCards {
+    width: 100%;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.mtgCards:hover {
+    margin: 0px;
+    border: 2px whitesmoke solid;
+}

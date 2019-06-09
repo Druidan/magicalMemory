@@ -1,0 +1,14 @@
+:root {
+  
+}
+
+body {
+  margin: 0;
+  background-color: darkslategrey;
+  color: whitesmoke;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
