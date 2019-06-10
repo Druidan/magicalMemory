@@ -21,7 +21,7 @@ As the app is run, it must be able to do the following:
 Our app will be using the following NPM:
 * [React](https://reactjs.org/) - Our app is first and foremost a React app, and it's whole structure will be defined as such.
 * [React Router](https://www.npmjs.com/package/react-router) - As part of React, we will be using React Router to keep everything on one page.
-* [Axios](https://www.npmjs.com/package/axios) - Our app will be making calls to the [Scryfall]() API for the Magic the Gathering card images we will be using.
+* [Axios](https://www.npmjs.com/package/axios) - Our app will be making calls to the [Scryfall](https://scryfall.com/docs/api) API for the Magic the Gathering card images we will be using.
 
 ## Active Bugs and Issues
 * The CSS needs a complete finishing polish sweep. That includes everything from basic font-families and sizes, to backgrounds, etc.
