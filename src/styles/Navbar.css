@@ -1,0 +1,32 @@
+.navBar {
+    width: 95%;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-areas: 
+        "home   title   title   title   title   mMenu"
+        ".  tag tag tag tag .";
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.homeCorner {
+    grid-area: home;
+    cursor: pointer;
+}
+
+.titleText {
+    grid-area: title;
+}
+
+.mainMenuExit {
+    grid-area: mMenu;
+    cursor: pointer;
+}
+
+.tagLine {
+    grid-area: tag;
+}

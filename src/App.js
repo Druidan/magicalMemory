@@ -5,7 +5,6 @@ import GamePage from './pages/GamePage';
 import EmptyPage from './pages/EmptyPage';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import './styles/App.css';
 
 export default class App extends Component {
 state = {
@@ -47,7 +46,7 @@ render() {
             component={EmptyPage} 
           />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </Router>
   );

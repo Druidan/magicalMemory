@@ -1,3 +1,31 @@
+
+:root {
+  --ELCblack: rgba(25, 25, 25, 1);
+}
+
+body {
+  margin: 0;
+  background-color: var(--ELCblack);
+  color: whitesmoke;
+}
+
+a:link {
+  color: lightblue;
+  text-decoration: none;
+}
+
+a:active, a:visited {
+  color: lightyellow;
+}
+
+a:hover {
+  color: pink;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
 .newBody {
   width: 100%;
 }

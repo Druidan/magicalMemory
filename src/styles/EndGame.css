@@ -1,0 +1,31 @@
+.EndGameModal {
+    position: absolute;
+    display: grid;
+    grid-gap: 1%;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.winnerDiv {
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.loserDiv {
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    text-align: center;
+}

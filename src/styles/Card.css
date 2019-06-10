@@ -1,27 +1,114 @@
-.gameBoard {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    text-align: center;
-}
-
-.cardsDiv{
-    display: grid;
-    margin: 10px;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    max-width: 4fr;
-    justify-self: center;
-    justify-items: center;
+:root {
+    --cardW: 30vw;
+    --cardH: 42vw;
 }
 
 .mtgCards {
-    width: 100%;
-    margin: 2px;
+    width: var(--cardW);
+    height: var(--cardH);
+    position: relative;
     cursor: pointer;
 }
 
-.mtgCards:hover {
+.mtgCards .innerMtgCards {
+    width: var(--cardW);
+    height: var(--cardH);
+    -webkit-transform-style: preserve-3d;
+    transition: transform 0.8s;
+    -webkit-transition: transform 0.8s; 
+}
+
+.mtgCards .innerMtgCards .cardBack {
+    width: var(--cardW);
+    height: var(--cardH);
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 1;
+}
+
+.mtgCards .innerMtgCards .cardFront {
+    width: var(--cardW);
+    height: var(--cardH);
+    position: absolute;
+    background-color: black;
+    color: white;
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.mtgCards .innerMtgCards .allcards {
+    border-radius: 5%;
+    width: var(--cardW);
+    height: var(--cardH);
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    z-index: 2;
+}
+
+.flipped {
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    transform: rotateY(180deg) scaleX(-1);
+    -webkit-transform: rotateY(180deg) scaleX(-1);
+}
+
+.unSelectedCard {
+    margin: 2px;
+}
+
+.unSelectedCard:hover {
     margin: 0px;
+    border-radius: 5%;
     border: 2px whitesmoke solid;
+}
+
+.selectedCard {
+    margin: 0px;
+    border-radius: 5%;
+    border: 2px gold solid;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.finishedCard {
+    filter: sepia(80%);
+    transform: rotateY(180deg) scaleX(-1);
+    -webkit-transform: rotateY(180deg) scaleX(-1);
+}
+
+@media screen and (min-width: 550px) { 
+
+    :root {
+        --cardW: 22vw;
+        --cardH: 30.8vw;
+    }
+
+}
+
+@media screen and (min-width: 750px) { 
+
+    :root {
+        --cardW: 18vw;
+        --cardH: 25.2vw;
+    }
+
+}
+
+@media screen and (min-width: 900px) { 
+
+    :root {
+        --cardW: 14vw;
+        --cardH: 19.6vw;
+    }
+
+}
+
+@media screen and (min-width: 1200px) { 
+
+    :root {
+        --cardW: 12vw;
+        --cardH: 16.8vw;
+    }
+
 }

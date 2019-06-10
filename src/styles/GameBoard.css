@@ -1,0 +1,57 @@
+.gameBoard {
+    position: relative;
+    display: grid;
+    grid-gap: 3vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        'wins   tries tries losses'
+        'cards  cards   cards   cards';
+    justify-items: center;
+    align-items: center;
+}
+
+.wins {
+    grid-area: wins;
+    justify-self: center
+}
+
+.remainingText {
+    grid-area: tries;
+    text-align: center;
+}
+
+.loses {
+    grid-area: loses;
+    justify-self: center
+}
+
+.cardsDiv{
+    grid-area: cards;
+    display: grid;
+    margin: 10px;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    justify-self: center;
+    justify-items: center;
+}
+
+
+@media screen and (min-width: 550px) { 
+
+    .gameBoard {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cardsDiv{
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+
+}
+
+@media screen and (min-width: 1200px) { 
+
+    .cardsDiv{
+        grid-template-columns: repeat(6, minmax(100px, 1fr));
+    }
+
+}

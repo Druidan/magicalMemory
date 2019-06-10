@@ -3,7 +3,13 @@ import '../styles/Navbar.css'
 
 function Navbar() {
     return (
-        <h1>Navbar</h1>
+        <nav className='navBar'>
+            <h1 className='homeCorner'><a href='https://edwardcheever.herokuapp.com' target='_blank'>Home</a></h1>
+            <h1 className='titleText'>Magical Memory</h1>
+            <h3 className='tagLine'>A Magic the Gathering Matching Memory Game</h3>
+            <h1 className='mainMenuExit'><a href='/welcome'>Main Menu</a></h1>
+        </nav>
+    
     );
 }
 
