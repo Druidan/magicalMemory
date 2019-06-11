@@ -11,7 +11,7 @@ state = {
     pagesChecked: false,
     cardArr: [],
     difficulty: 'easy',
-    tries: 5,
+    tries: 4,
     remainingCards: 100,
     choice1: '',
     choice2: '',
@@ -201,7 +201,7 @@ resetGame = (e) => {
         pagesChecked: false,
         cardArr: [],
         difficulty: 'easy',
-        tries: 3,
+        tries: 4,
         remainingCards: 100,
         choice1: '',
         choice2: '',
@@ -215,26 +215,26 @@ resetGame = (e) => {
 render() {
     let cardId = 0;
     return (
-        <section className='gameBoard'>
-            <h1 className='winsNlosses wins'>Wins: {this.state.wins}</h1><h1 className='remainingText'>Remaining Tries: {this.state.tries}</h1><h1 className='winsNlosses losses'>Losses: {this.state.losses}</h1>
-            <div className='cardsDiv'>
-                {this.state.cardArr.map(card => (
-                    <Card {...this.props} 
-                        key={cardId++}
-                        src={card.image_uris.normal}
-                        selectCard={this.selectCards}
-                    />
-                ))}
-            </div>
-            <EndGameModal {...this.props}
+        <div className='metaBoard'>
+            <section className='gameBoard'>
+                <h1 className='winsNlosses wins'>Wins: {this.state.wins}</h1><h1 className='remainingText'>Remaining Tries: {this.state.tries}</h1><h1 className='winsNlosses losses'>Losses: {this.state.losses}</h1>
+                <div className='cardsDiv'>
+                    {this.state.cardArr.map(card => (
+                        <Card {...this.props} 
+                            key={cardId++}
+                            src={card.image_uris.normal}
+                            selectCard={this.selectCards}
+                        />
+                    ))}
+                </div>
+            </section>
+            {!this.props.gameOn ? <EndGameModal {...this.props}
                 gameOn={this.props.gameOn}
                 tries={this.state.tries}
                 morePlay={this.state.morePlay}
                 resetGame={this.resetGame}
-            />
-        </section>
-
-
+            /> : <p></p>}
+        </div>
     )
 }
 

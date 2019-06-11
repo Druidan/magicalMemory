@@ -72,7 +72,7 @@
 }
 
 .finishedCard {
-    filter: sepia(80%);
+    filter: sepia(60%);
     transform: rotateY(180deg) scaleX(-1);
     -webkit-transform: rotateY(180deg) scaleX(-1);
 }

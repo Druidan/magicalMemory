@@ -1,6 +1,10 @@
 .play-btn, .reset-btn, .returnhome-btn {
     cursor: pointer;
     font-size: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    align-self: center;
 }
 
 .play-btn {

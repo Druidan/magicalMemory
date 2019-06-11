@@ -11,10 +11,10 @@ export default class EndGameModal extends Component {
         return (
             <div className='endGameModal'>
                 {!this.props.gameOn ? 
-                    <dialog open>
+                    <div className='endGameDiv'>
                             {this.props.tries > 0 && !this.props.gameOn ? 
                                 <div className='winnerDiv'>
-                                    <p>You Won!</p>
+                                    <h1 className='endText winnerTxt'>You Won!</h1>
                                     <PlayBtns {...this.props}
                                         gameOn={this.props.gameOn}
                                         morePlay={!this.state.morePlay}
@@ -22,7 +22,7 @@ export default class EndGameModal extends Component {
                                     />
                                 </div> :
                                 <div className='loserDiv'>
-                                    <p>You Lost!</p>
+                                    <h1 className='endText loserTxt'>You Lost!</h1>
                                     <PlayBtns {...this.props}
                                         gameOn={this.props.gameOn}
                                         morePlay={this.props.morePlay}
@@ -30,8 +30,8 @@ export default class EndGameModal extends Component {
                                     />
                                 </div>
                             }
-                    </dialog> 
-                : <dialog></dialog>}
+                    </div> 
+                : <div></div>}
             </div>
     
         )}
